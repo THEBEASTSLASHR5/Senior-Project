@@ -1,5 +1,5 @@
 {
-  "$GMProject":"",
+  "$GMProject":"v1",
   "%Name":"SeniorProject",
   "AudioGroups":[
     {"$GMAudioGroup":"","%Name":"audiogroup_default","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
@@ -26,22 +26,30 @@
     {"$GMFolder":"","%Name":"Tile Sets","folderPath":"folders/Tile Sets.yy","name":"Tile Sets","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Timelines","folderPath":"folders/Timelines.yy","name":"Timelines","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
+  "ForcedPrefabProjectReferences":[],
   "IncludedFiles":[],
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.2.0.132",
+    "IDEVersion":"2024.13.1.193",
   },
   "name":"SeniorProject",
   "resources":[
     {"id":{"name":"obj_tylerHullTest","path":"objects/obj_tylerHullTest/obj_tylerHullTest.yy",},},
-    {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
-    {"id":{"name":"spr_tylerHullTest","path":"sprites/spr_tylerHullTest/spr_tylerHullTest.yy",},},
+    {"id":{"name":"EntranceTest","path":"rooms/EntranceTest/EntranceTest.yy",},},
+    {"id":{"name":"EntranceTest2","path":"rooms/EntranceTest2/EntranceTest2.yy",},},
+    {"id":{"name":"spr_BasicRPGground","path":"sprites/spr_BasicRPGground/spr_BasicRPGground.yy",},},
+    {"id":{"name":"spr_BasicRPGnature","path":"sprites/spr_BasicRPGnature/spr_BasicRPGnature.yy",},},
+    {"id":{"name":"spr_BasicRPGstruct","path":"sprites/spr_BasicRPGstruct/spr_BasicRPGstruct.yy",},},
+    {"id":{"name":"spr_FreeTD","path":"sprites/spr_FreeTD/spr_FreeTD.yy",},},
+    {"id":{"name":"ts_BasicRPGground","path":"tilesets/ts_BasicRPGground/ts_BasicRPGground.yy",},},
+    {"id":{"name":"ts_FreeTD","path":"tilesets/ts_FreeTD/ts_FreeTD.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"roomId":{"name":"EntranceTest","path":"rooms/EntranceTest/EntranceTest.yy",},},
+    {"roomId":{"name":"EntranceTest2","path":"rooms/EntranceTest2/EntranceTest2.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

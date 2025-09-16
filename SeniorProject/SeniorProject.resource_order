@@ -16,5 +16,12 @@
     {"name":"Tile Sets","order":2,"path":"folders/Tile Sets.yy",},
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
   ],
-  "ResourceOrderSettings":[],
+  "ResourceOrderSettings":[
+    {"name":"EntranceTest2","order":1,"path":"rooms/EntranceTest2/EntranceTest2.yy",},
+    {"name":"spr_BasicRPGground","order":2,"path":"sprites/spr_BasicRPGground/spr_BasicRPGground.yy",},
+    {"name":"spr_BasicRPGnature","order":5,"path":"sprites/spr_BasicRPGnature/spr_BasicRPGnature.yy",},
+    {"name":"spr_BasicRPGstruct","order":4,"path":"sprites/spr_BasicRPGstruct/spr_BasicRPGstruct.yy",},
+    {"name":"spr_FreeTD","order":1,"path":"sprites/spr_FreeTD/spr_FreeTD.yy",},
+    {"name":"ts_BasicRPGground","order":3,"path":"tilesets/ts_BasicRPGground/ts_BasicRPGground.yy",},
+  ],
 }
