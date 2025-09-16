@@ -21,7 +21,9 @@
     {"name":"spr_BasicRPGground","order":2,"path":"sprites/spr_BasicRPGground/spr_BasicRPGground.yy",},
     {"name":"spr_BasicRPGnature","order":5,"path":"sprites/spr_BasicRPGnature/spr_BasicRPGnature.yy",},
     {"name":"spr_BasicRPGstruct","order":4,"path":"sprites/spr_BasicRPGstruct/spr_BasicRPGstruct.yy",},
+    {"name":"spr_Dungeon_tileset","order":6,"path":"sprites/spr_Dungeon_tileset/spr_Dungeon_tileset.yy",},
     {"name":"spr_FreeTD","order":1,"path":"sprites/spr_FreeTD/spr_FreeTD.yy",},
     {"name":"ts_BasicRPGground","order":3,"path":"tilesets/ts_BasicRPGground/ts_BasicRPGground.yy",},
+    {"name":"ts_Dungeon_tileset","order":7,"path":"tilesets/ts_Dungeon_tileset/ts_Dungeon_tileset.yy",},
   ],
 }
