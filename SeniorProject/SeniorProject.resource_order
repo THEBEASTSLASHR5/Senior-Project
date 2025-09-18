@@ -19,10 +19,12 @@
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
   ],
   "ResourceOrderSettings":[
+    {"name":"obj_bulletparent","order":6,"path":"objects/obj_bulletparent/obj_bulletparent.yy",},
     {"name":"obj_player","order":1,"path":"objects/obj_player/obj_player.yy",},
     {"name":"obj_swordhitbox","order":3,"path":"objects/obj_swordhitbox/obj_swordhitbox.yy",},
     {"name":"obj_testenemy","order":2,"path":"objects/obj_testenemy/obj_testenemy.yy",},
     {"name":"obj_wizard","order":4,"path":"objects/obj_wizard/obj_wizard.yy",},
+    {"name":"obj_wizardmagic","order":5,"path":"objects/obj_wizardmagic/obj_wizardmagic.yy",},
     {"name":"EntranceTest2","order":1,"path":"rooms/EntranceTest2/EntranceTest2.yy",},
     {"name":"spr_BasicRPGground","order":2,"path":"sprites/spr_BasicRPGground/spr_BasicRPGground.yy",},
     {"name":"spr_BasicRPGnature","order":5,"path":"sprites/spr_BasicRPGnature/spr_BasicRPGnature.yy",},

@@ -1,15 +1,18 @@
 {
   "$GMObject":"",
-  "%Name":"obj_tylerHullTest",
+  "%Name":"obj_wizardmagic",
   "eventList":[],
   "managed":true,
-  "name":"obj_tylerHullTest",
+  "name":"obj_wizardmagic",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
     "path":"folders/Objects.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_bulletparent",
+    "path":"objects/obj_bulletparent/obj_bulletparent.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -27,7 +30,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_wizardmagic",
+    "path":"sprites/spr_wizardmagic/spr_wizardmagic.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

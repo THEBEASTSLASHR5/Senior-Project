@@ -43,3 +43,13 @@ if (attack == true) {
 	var hitbox = instance_create_layer(x, y, "lay_player", obj_swordhitbox);	
 	hitbox.image_angle = radtodeg(dir_angle)-90;
 }
+
+var bullet_collide = instance_place(x,y,obj_bulletparent);
+if (bullet_collide != noone) {
+	instance_destroy(bullet_collide);
+	hitpoints -= 1;
+}
+
+if (hitpoints == 0) {
+	game_restart();	
+}

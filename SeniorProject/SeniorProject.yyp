@@ -37,11 +37,12 @@
   },
   "name":"SeniorProject",
   "resources":[
+    {"id":{"name":"obj_bulletparent","path":"objects/obj_bulletparent/obj_bulletparent.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"obj_swordhitbox","path":"objects/obj_swordhitbox/obj_swordhitbox.yy",},},
     {"id":{"name":"obj_testenemy","path":"objects/obj_testenemy/obj_testenemy.yy",},},
-    {"id":{"name":"obj_tylerHullTest","path":"objects/obj_tylerHullTest/obj_tylerHullTest.yy",},},
     {"id":{"name":"obj_wizard","path":"objects/obj_wizard/obj_wizard.yy",},},
+    {"id":{"name":"obj_wizardmagic","path":"objects/obj_wizardmagic/obj_wizardmagic.yy",},},
     {"id":{"name":"EntranceTest","path":"rooms/EntranceTest/EntranceTest.yy",},},
     {"id":{"name":"EntranceTest2","path":"rooms/EntranceTest2/EntranceTest2.yy",},},
     {"id":{"name":"spr_BasicRPGground","path":"sprites/spr_BasicRPGground/spr_BasicRPGground.yy",},},
