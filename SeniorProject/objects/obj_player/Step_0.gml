@@ -4,7 +4,7 @@ move_down = keyboard_check(ord("S"));
 move_left = keyboard_check(ord("A"));
 move_up = keyboard_check(ord("W"));
 roll = keyboard_check_pressed(vk_space) || keyboard_check_pressed(vk_shift);
-
+attack = keyboard_check_pressed(ord("J"));
 
 if (roll == true) && (rolltimer == 0) {	//Roll
 	rolltimer = 20;
@@ -35,3 +35,11 @@ dir_angle = arctan2(move_up-move_down,move_right-move_left);
 x += velocity*cos(dir_angle);
 y -= velocity*sin(dir_angle);
 
+if (velocity == 0) {
+	sprite_index = spr_playerstand;
+}
+
+if (attack == true) {
+	var hitbox = instance_create_layer(x, y, "lay_player", obj_swordhitbox);	
+	hitbox.image_angle = radtodeg(dir_angle)-90;
+}
