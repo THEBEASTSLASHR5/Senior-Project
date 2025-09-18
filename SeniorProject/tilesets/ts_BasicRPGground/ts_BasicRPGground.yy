@@ -8,7 +8,7 @@
     "TileSerialiseData":[],
   },
   "name":"ts_BasicRPGground",
-  "out_columns":7,
+  "out_columns":21,
   "out_tilehborder":2,
   "out_tilevborder":2,
   "parent":{
@@ -34,5 +34,5 @@
   "tileWidth":16,
   "tilexoff":0,
   "tileyoff":0,
-  "tile_count":48,
+  "tile_count":432,
 }
