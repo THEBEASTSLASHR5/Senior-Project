@@ -1,10 +1,10 @@
 //Player Input
-move_right = keyboard_check(ord("D"));
-move_down = keyboard_check(ord("S"));
-move_left = keyboard_check(ord("A"));
-move_up = keyboard_check(ord("W"));
-roll = keyboard_check_pressed(vk_space) || keyboard_check_pressed(vk_shift);
-attack = keyboard_check_pressed(ord("J"));
+var move_right = keyboard_check(ord("D"));
+var move_down = keyboard_check(ord("S"));
+var move_left = keyboard_check(ord("A"));
+var move_up = keyboard_check(ord("W"));
+var roll = keyboard_check_pressed(vk_space) || keyboard_check_pressed(vk_shift);
+var attack = keyboard_check_pressed(ord("J"));
 
 if (roll == true) && (rolltimer == 0) {	//Roll
 	rolltimer = 20;
