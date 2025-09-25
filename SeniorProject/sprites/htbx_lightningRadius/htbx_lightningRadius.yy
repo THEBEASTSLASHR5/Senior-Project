@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"htbx",
-    "path":"folders/Sprites/spr_player/htbx.yy",
+    "name":"htbxGroup",
+    "path":"folders/Sprites/sprGroup_player/htbxGroup.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

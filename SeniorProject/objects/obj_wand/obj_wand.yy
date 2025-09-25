@@ -6,8 +6,8 @@
   "name":"obj_wand",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"objGroup_playerCharacter",
+    "path":"folders/Objects/objGroup_player/objGroup_playerCharacter.yy",
   },
   "parentObjectId":null,
   "persistent":false,

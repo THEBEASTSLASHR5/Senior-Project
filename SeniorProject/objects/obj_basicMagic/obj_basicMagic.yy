@@ -8,8 +8,8 @@
   "name":"obj_basicMagic",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"objGroup_playerAttacks",
+    "path":"folders/Objects/objGroup_player/objGroup_playerAttacks.yy",
   },
   "parentObjectId":null,
   "persistent":false,

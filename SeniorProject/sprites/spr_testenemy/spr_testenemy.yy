@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"spr_enemy",
-    "path":"folders/Sprites/spr_enemy.yy",
+    "name":"sprGroup_enemy",
+    "path":"folders/Sprites/sprGroup_enemy.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

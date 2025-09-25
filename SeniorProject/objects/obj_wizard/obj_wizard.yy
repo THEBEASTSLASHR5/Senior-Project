@@ -9,8 +9,8 @@
   "name":"obj_wizard",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"objGroup_enemy",
+    "path":"folders/Objects/objGroup_enemy.yy",
   },
   "parentObjectId":null,
   "persistent":false,

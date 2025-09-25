@@ -6,8 +6,8 @@
   "name":"obj_bulletparent",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"objGroup_enemyAttacks",
+    "path":"folders/Objects/objGroup_enemy/objGroup_enemyAttacks.yy",
   },
   "parentObjectId":null,
   "persistent":false,

@@ -4,4 +4,4 @@ if (hitpoints <= 0) {
 	instance_destroy();	
 }
 
-show_debug_message(hitpoints);
+//show_debug_message(hitpoints);

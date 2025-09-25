@@ -6,6 +6,19 @@ var move_up = keyboard_check(ord("W"));
 var roll = keyboard_check_pressed(vk_space) || keyboard_check_pressed(vk_shift);
 var attack = mouse_check_button_pressed(mb_left);
 var altattack = mouse_check_button_pressed(mb_right);
+var weapon1 = keyboard_check_pressed(ord("1"));
+var weapon2 = keyboard_check_pressed(ord("2"));
+var weapon3 = keyboard_check_pressed(ord("3"));
+
+if (weapon1) {	//Switch between weapons
+	attack_selected = attack_type.basic;
+} else if (weapon2) {
+	attack_selected = attack_type.fireBall;
+} else if (weapon3) {
+	attack_selected = attack_type.lightning;
+}
+
+
 
 var theta = (point_direction(x, y, mouse_x, mouse_y)); //Get angle to mouse, convert to radians.
 var thetaInRadians = theta * ((2*pi)/360);
@@ -49,16 +62,18 @@ if (velocity == 0) {
 	sprite_index = spr_playerstand;
 }
 
-if (attack == true) {
-	//var hitbox = instance_create_layer(x, y, "lay_player", obj_swordhitbox);
-	instance_create_layer(x, y, "lay_bullets", obj_basicMagic, {speed: 3, direction: theta});
-	
-	//instance_create_layer(x, y, "lay_explosion", obj_lightningManager);
+if (attack == true) {	//Attack based on selected weapon type
+	if (attack_selected == attack_type.basic) {
+		instance_create_layer(x, y, "lay_bullets", obj_basicMagic, {speed: 3, direction: theta});
+	}
+	if (attack_selected == attack_type.fireBall) {
+		instance_create_layer(x, y, "lay_bullets", obj_fireBallMagic, {speed: 3, direction: theta});
+	}
+	if (attack_selected == attack_type.lightning) {
+		instance_create_layer(x, y, "lay_bullets", obj_lightningbolt, {image_angle: theta, speed: 3, direction: theta, original: true});
+	}
 }
 
-if (altattack == true) {
-	instance_create_layer(x, y, "lay_bullets", obj_fireBallMagic, {speed: 3, direction: theta});
-}
 
 var bullet_collide = instance_place(x,y,obj_bulletparent);
 if (bullet_collide != noone) {
