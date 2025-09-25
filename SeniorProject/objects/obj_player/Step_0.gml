@@ -4,7 +4,17 @@ var move_down = keyboard_check(ord("S"));
 var move_left = keyboard_check(ord("A"));
 var move_up = keyboard_check(ord("W"));
 var roll = keyboard_check_pressed(vk_space) || keyboard_check_pressed(vk_shift);
-var attack = keyboard_check_pressed(ord("J"));
+var attack = mouse_check_button_pressed(mb_left);
+var altattack = mouse_check_button_pressed(mb_right);
+
+var theta = (point_direction(x, y, mouse_x, mouse_y)); //Get angle to mouse, convert to radians.
+var thetaInRadians = theta * ((2*pi)/360);
+
+//show_debug_message(thetaInRadians);
+player_Wand.x = x + 10 * cos(thetaInRadians);	//Move wand position.
+player_Wand.y = y - 10 * sin(thetaInRadians);
+
+
 
 if (roll == true) && (rolltimer == 0) {	//Roll
 	rolltimer = 20;
@@ -40,8 +50,14 @@ if (velocity == 0) {
 }
 
 if (attack == true) {
-	var hitbox = instance_create_layer(x, y, "lay_player", obj_swordhitbox);	
-	hitbox.image_angle = radtodeg(dir_angle)-90;
+	//var hitbox = instance_create_layer(x, y, "lay_player", obj_swordhitbox);
+	instance_create_layer(x, y, "lay_bullets", obj_basicMagic, {speed: 3, direction: theta});
+	
+	//instance_create_layer(x, y, "lay_explosion", obj_lightningManager);
+}
+
+if (altattack == true) {
+	instance_create_layer(x, y, "lay_bullets", obj_fireBallMagic, {speed: 3, direction: theta});
 }
 
 var bullet_collide = instance_place(x,y,obj_bulletparent);

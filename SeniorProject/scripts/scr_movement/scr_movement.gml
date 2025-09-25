@@ -1,0 +1,36 @@
+// Script assets have changed for v2.3.0 see
+// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
+function scr_movement(){
+	if (roll == true) && (rolltimer == 0) {	//Roll
+		rolltimer = 20;
+	}
+
+	if (rolltimer > 0) {
+		sprite_index = spr_playerroll;
+		max_velocity = 2;
+		rolltimer -= 1;
+	} else {
+		sprite_index = spr_playerwalk;
+		max_velocity = 1;
+	}
+
+	if (move_right == true) {	//Swap facing direction
+		image_xscale = 1;	
+	} else if (move_left == true) {
+		image_xscale = -1;
+	}
+
+	//Movement
+	if (move_right == true || move_down == true || move_left == true || move_up == true) {
+		velocity = max_velocity;	
+	} else {
+		velocity = 0;
+	}
+	dir_angle = arctan2(move_up-move_down,move_right-move_left);
+	x += velocity*cos(dir_angle);
+	y -= velocity*sin(dir_angle);
+
+	if (velocity == 0) {
+		sprite_index = spr_playerstand;
+	}
+}
