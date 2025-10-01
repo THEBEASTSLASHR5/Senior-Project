@@ -1,0 +1,1 @@
+draw_text(x,y, "rm_normal_horiz_2");

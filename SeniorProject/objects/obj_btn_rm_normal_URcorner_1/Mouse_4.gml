@@ -1,0 +1,1 @@
+room_goto(rm_normal_URcorner_1);

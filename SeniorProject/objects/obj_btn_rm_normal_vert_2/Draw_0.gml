@@ -1,0 +1,1 @@
+draw_text(x,y, "rm_normal_vert_2");
