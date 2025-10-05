@@ -1,1 +1,1 @@
-room_goto(rm_normal_vert_1);
+room_goto(rm_normal_vert_1_long);
