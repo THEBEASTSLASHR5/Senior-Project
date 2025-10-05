@@ -1,1 +1,1 @@
-room_goto(rm_normal_horiz_2);
+room_goto(rm_normal_horiz_2_long);
