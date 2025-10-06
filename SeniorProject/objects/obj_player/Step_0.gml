@@ -1,4 +1,5 @@
 //Player Input
+depth = -y;
 var move_right = keyboard_check(ord("D"));
 var move_down = keyboard_check(ord("S"));
 var move_left = keyboard_check(ord("A"));
@@ -27,6 +28,13 @@ var thetaInRadians = theta * ((2*pi)/360);
 player_Wand.x = x + 10 * cos(thetaInRadians);	//Move wand position.
 player_Wand.y = y - 10 * sin(thetaInRadians);
 
+if (thetaInRadians >= pi) {		//Show wand in front of player when at specific angle.
+	player_Wand.depth = layer_get_depth("lay_player")-1;
+} else {
+	player_Wand.depth = layer_get_depth("lay_wand_back");	
+}
+
+
 
 
 if (roll == true) && (rolltimer == 0) {	//Roll
@@ -37,9 +45,11 @@ if (rolltimer > 0) {
 	sprite_index = spr_playerroll;
 	max_velocity = 2;
 	rolltimer -= 1;
+	image_blend = c_aqua;
 } else {
 	sprite_index = spr_playerwalk;
 	max_velocity = 1;
+	image_blend = c_white;
 }
 
 if (move_right == true) {	//Swap facing direction
@@ -62,23 +72,34 @@ if (velocity == 0) {
 	sprite_index = spr_playerstand;
 }
 
-if (attack == true) {	//Attack based on selected weapon type
+if (attack == true && attackCooldown <= 0) {	//Attack based on selected weapon type
 	if (attack_selected == attack_type.basic) {
+		attackCooldownMax = 10;
 		instance_create_layer(x, y, "lay_bullets", obj_basicMagic, {speed: 3, direction: theta});
 	}
 	if (attack_selected == attack_type.fireBall) {
+		attackCooldownMax = 20;
 		instance_create_layer(x, y, "lay_bullets", obj_fireBallMagic, {speed: 3, direction: theta});
 	}
 	if (attack_selected == attack_type.lightning) {
+		attackCooldownMax = 30;
 		instance_create_layer(x, y, "lay_bullets", obj_lightningbolt, {image_angle: theta, speed: 3, direction: theta, original: true});
 	}
+	attackCooldown = attackCooldownMax;
+}
+
+if (attackCooldown > 0) {
+	attackCooldown -= 1;	
 }
 
 
 var bullet_collide = instance_place(x,y,obj_bulletparent);
-if (bullet_collide != noone) {
-	instance_destroy(bullet_collide);
-	hitpoints -= 1;
+if (bullet_collide != noone && rolltimer <= 0) {
+	if (bullet_collide.disable == false) {
+		hitpoints -= bullet_collide.damage;
+		bullet_collide.disable = true;
+		instance_destroy(bullet_collide);
+	}
 }
 
 if (hitpoints == 0) {

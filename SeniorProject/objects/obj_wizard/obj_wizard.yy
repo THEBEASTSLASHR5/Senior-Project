@@ -10,9 +10,12 @@
   "overriddenProperties":[],
   "parent":{
     "name":"objGroup_enemy",
-    "path":"folders/Objects/objGroup_enemy.yy",
+    "path":"folders/Objects/objGroup_enemy/objGroup_enemy.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_enemyParent",
+    "path":"objects/obj_enemyParent/obj_enemyParent.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

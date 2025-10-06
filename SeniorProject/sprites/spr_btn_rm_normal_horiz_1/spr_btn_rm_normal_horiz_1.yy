@@ -44,8 +44,8 @@
   },
   "origin":0,
   "parent":{
-    "name":"Sprites",
-    "path":"folders/Sprites.yy",
+    "name":"sprGroup_sceneSelect",
+    "path":"folders/Sprites/sprGroup_sceneSelect.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

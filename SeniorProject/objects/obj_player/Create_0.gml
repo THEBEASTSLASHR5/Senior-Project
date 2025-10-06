@@ -6,6 +6,8 @@ hitpoints = 300;
 
 player_Wand = instance_create_layer(x, y, "lay_player", obj_wand);
 
+attackCooldown = 0;
+attackCooldownMax = 30;
 
 enum attack_type { //https://gamemaker.io/en/blog/hacking-stronger-enums-into-gml
 	basic,

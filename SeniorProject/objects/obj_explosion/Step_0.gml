@@ -15,7 +15,7 @@ if ((animate_Timer >= maxanimate_Timer) && (currentImage < 2)) { //Deal damage t
 	currentImage += 1;
 	if (currentImage == 2) {
 		var _list = ds_list_create(); //https://manual.gamemaker.io/lts/en/GameMaker_Language/GML_Reference/Asset_Management/Instances/instance_place_list.htm
-		var _num = instance_place_list(x, y, obj_testenemy, _list, false);
+		var _num = instance_place_list(x, y, obj_enemyParent, _list, false);
 
 		if _num > 0
 		{

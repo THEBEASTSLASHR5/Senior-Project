@@ -2,10 +2,10 @@
 // You can write your code in this editor
 
 
-var instance = instance_place(x, y, obj_testenemy);
+var instance = instance_place(x, y, obj_enemyParent);
 if ((instance != noone)) {
 	if !(instance_exists(donthit)) {
-		donthit = noone;	
+		donthit = noone;
 	}
 	
 	if (instance != donthit) {
@@ -13,7 +13,7 @@ if ((instance != noone)) {
 			originalBonusDamage = 2;
 			instance_create_layer(x, y, "lay_explosion", obj_lightningRadius, {origin: instance, originx: instance.x, originy: instance.y});
 		}
-		instance.hitpoints -= 1 + originalBonusDamage;
+		instance.hitpoints -= 3 + originalBonusDamage;
 		instance_destroy();
 	}
 }

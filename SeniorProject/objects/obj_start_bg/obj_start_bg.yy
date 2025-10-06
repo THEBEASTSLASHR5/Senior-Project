@@ -6,8 +6,8 @@
   "name":"obj_start_bg",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"objGroup_sceneSelect",
+    "path":"folders/Objects/sysGroup_system/objGroup_sceneSelect.yy",
   },
   "parentObjectId":null,
   "persistent":false,
