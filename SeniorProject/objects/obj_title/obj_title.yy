@@ -1,9 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"select_scene_background",
-  "eventList":[],
+  "%Name":"obj_title",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
-  "name":"select_scene_background",
+  "name":"obj_title",
   "overriddenProperties":[],
   "parent":{
     "name":"objGroup_sceneSelect",
@@ -28,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_background",
-    "path":"sprites/spr_background/spr_background.yy",
+    "name":"spr_title",
+    "path":"sprites/spr_title/spr_title.yy",
   },
   "spriteMaskId":null,
   "visible":true,
