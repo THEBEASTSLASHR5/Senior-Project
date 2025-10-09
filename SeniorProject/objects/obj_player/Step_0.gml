@@ -1,3 +1,11 @@
+if (global.paused) {
+    // Stop animations and skip movement logic
+    image_speed = 0;
+    exit;
+}
+image_speed = 1; // restore animation when unpaused
+
+
 //Player Input
 depth = -y;
 var move_right = keyboard_check(ord("D"));
