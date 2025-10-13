@@ -67,7 +67,6 @@
     {"name":"obj_wizard_spreadshot","order":5,"path":"objects/obj_wizard_spreadshot/obj_wizard_spreadshot.yy",},
     {"name":"obj_wizard","order":2,"path":"objects/obj_wizard/obj_wizard.yy",},
     {"name":"obj_wizardmagic","order":1,"path":"objects/obj_wizardmagic/obj_wizardmagic.yy",},
-    {"name":"select_scene_background","order":12,"path":"objects/select_scene_background/select_scene_background.yy",},
     {"name":"rm_cornerNE_9x3x9","order":12,"path":"rooms/rm_cornerNE_9x3x9/rm_cornerNE_9x3x9.yy",},
     {"name":"rm_cornerNW_9x3x9","order":13,"path":"rooms/rm_cornerNW_9x3x9/rm_cornerNW_9x3x9.yy",},
     {"name":"rm_cornerSE_9x3x9","order":15,"path":"rooms/rm_cornerSE_9x3x9/rm_cornerSE_9x3x9.yy",},
