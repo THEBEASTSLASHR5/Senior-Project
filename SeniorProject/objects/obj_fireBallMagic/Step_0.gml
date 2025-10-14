@@ -5,3 +5,9 @@ if (instance != noone) {
 	instance_create_layer(x, y, "lay_explosion", obj_explosion);
 	instance_destroy();
 }
+
+// Collision with SolidWall
+if place_meeting(x, y, objSolidWall){
+	instance_create_layer(x, y, "lay_explosion", obj_explosion);
+	instance_destroy();
+}

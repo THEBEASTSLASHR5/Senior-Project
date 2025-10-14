@@ -72,9 +72,31 @@ if (move_right == true || move_down == true || move_left == true || move_up == t
 } else {
 	velocity = 0;
 }
+
+
 dir_angle = arctan2(move_up-move_down,move_right-move_left);
-x += velocity*cos(dir_angle);
-y -= velocity*sin(dir_angle);
+var hspd = velocity * cos(dir_angle); // Horizontal speed
+var vspd = -velocity * sin(dir_angle); // vertical speed
+
+// Horizontal collision check
+if (place_meeting(x + hspd, y, objWall)) {
+	while (!place_meeting(x + sign(hspd), y, objWall)) {
+		x += sign(hspd);
+	}
+	hspd = 0;
+}
+x += hspd; // Apply horizontal movement
+
+// Vertical collision check
+if (place_meeting(x, y + vspd, objWall)) {
+	while (!place_meeting(x, y + sign(vspd), objWall)) {
+		y += sign(vspd);
+	}
+	vspd = 0;
+}
+y += vspd; // Apply vertical movement
+
+
 
 if (velocity == 0) {
 	sprite_index = spr_playerstand;
