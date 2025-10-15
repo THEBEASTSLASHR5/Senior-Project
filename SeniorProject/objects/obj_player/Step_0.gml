@@ -132,6 +132,6 @@ if (bullet_collide != noone && rolltimer <= 0) {
 	}
 }
 
-if (hitpoints == 0) {
+if (hitpoints <= 0) {
 	game_restart();	
 }
