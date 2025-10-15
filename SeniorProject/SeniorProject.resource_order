@@ -87,6 +87,7 @@
     {"name":"rm_scene_select","order":11,"path":"rooms/rm_scene_select/rm_scene_select.yy",},
     {"name":"rm_settings","order":16,"path":"rooms/rm_settings/rm_settings.yy",},
     {"name":"rm_start","order":10,"path":"rooms/rm_start/rm_start.yy",},
+    {"name":"rm_test","order":18,"path":"rooms/rm_test/rm_test.yy",},
     {"name":"rm_world1","order":16,"path":"rooms/rm_world1/rm_world1.yy",},
     {"name":"htbx_fireBall2","order":1,"path":"sprites/htbx_fireBall2/htbx_fireBall2.yy",},
     {"name":"htbx_fireBall3","order":2,"path":"sprites/htbx_fireBall3/htbx_fireBall3.yy",},

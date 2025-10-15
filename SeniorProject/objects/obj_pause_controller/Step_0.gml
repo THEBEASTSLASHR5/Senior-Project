@@ -11,12 +11,13 @@ if (global.paused)
     {
         if (object_index == obj_pause_button || object_index == obj_resume_button) exit;
 
-        // Stop sprite animations
-        image_speed = 0;
-
-        // Save position once
+        // Save position & Image Speed once
         if (!variable_instance_exists(id, "stored_x")) stored_x = x;
         if (!variable_instance_exists(id, "stored_y")) stored_y = y;
+		if (!variable_instance_exists(id, "stored_image_speed")) stored_image_speed = image_speed;
+
+        // Stop sprite animations
+        image_speed = 0;
 
         // Freeze object in place
         x = stored_x;
@@ -39,7 +40,9 @@ else
         if (object_index == obj_pause_button || object_index == obj_resume_button) exit;
 
         // Re-enable animations
-        image_speed = 1;
+		if (variable_instance_exists(id, "stored_image_speed")) {
+			image_speed = stored_image_speed;
+		}
 
         // Update stored positions for next pause
         stored_x = x;

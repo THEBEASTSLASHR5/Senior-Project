@@ -116,6 +116,7 @@
     {"id":{"name":"rm_scene_select","path":"rooms/rm_scene_select/rm_scene_select.yy",},},
     {"id":{"name":"rm_settings","path":"rooms/rm_settings/rm_settings.yy",},},
     {"id":{"name":"rm_start","path":"rooms/rm_start/rm_start.yy",},},
+    {"id":{"name":"rm_test","path":"rooms/rm_test/rm_test.yy",},},
     {"id":{"name":"rm_world1","path":"rooms/rm_world1/rm_world1.yy",},},
     {"id":{"name":"scr_movement","path":"scripts/scr_movement/scr_movement.yy",},},
     {"id":{"name":"htbx_fireBall1","path":"sprites/htbx_fireBall1/htbx_fireBall1.yy",},},
@@ -175,6 +176,7 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
+    {"roomId":{"name":"rm_test","path":"rooms/rm_test/rm_test.yy",},},
     {"roomId":{"name":"rm_start","path":"rooms/rm_start/rm_start.yy",},},
     {"roomId":{"name":"EntranceTest","path":"rooms/EntranceTest/EntranceTest.yy",},},
     {"roomId":{"name":"rm_normal_vert_1_long","path":"rooms/rm_normal_vert_1_long/rm_normal_vert_1_long.yy",},},
