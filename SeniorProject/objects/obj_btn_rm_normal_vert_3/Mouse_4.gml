@@ -1,1 +1,1 @@
-room_goto(rm_normal_vert_3);
+room_goto(rm_world1);
