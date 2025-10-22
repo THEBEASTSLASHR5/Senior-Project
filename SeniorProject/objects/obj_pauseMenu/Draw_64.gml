@@ -1,3 +1,11 @@
+// Draw frozen background
+if (surface_exists(global.pausedSurf)) {
+    var gw = display_get_gui_width();
+    var gh = display_get_gui_height();
+    draw_surface_stretched(global.pausedSurf, 0, 0, gw, gh);
+}
+
+
 var screen_w = display_get_gui_width();
 var screen_h = display_get_gui_height();
 
