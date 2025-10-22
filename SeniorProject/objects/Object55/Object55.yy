@@ -1,12 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"obj_pause_controller",
+  "%Name":"Object55",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":4,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_pause_controller",
+  "name":"Object55",
   "overriddenProperties":[],
   "parent":{
     "name":"objGroup_sceneSelect",
@@ -30,7 +29,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_btn_scene_select",
+    "path":"sprites/spr_btn_scene_select/spr_btn_scene_select.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }
