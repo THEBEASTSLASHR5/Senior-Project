@@ -1526,6 +1526,7 @@
     {"name":"inst_35F6DDA2","path":"rooms/rm_world1/rm_world1.yy",},
     {"name":"inst_3A72E80","path":"rooms/rm_world1/rm_world1.yy",},
     {"name":"inst_447D91E5","path":"rooms/rm_world1/rm_world1.yy",},
+    {"name":"inst_5D36D848","path":"rooms/rm_world1/rm_world1.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -3057,6 +3058,7 @@
         {"$GMRInstance":"v2","%Name":"inst_35F6DDA2","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_35F6DDA2","objectId":{"name":"objSmallSolidWall","path":"objects/objSmallSolidWall/objSmallSolidWall.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1830.0,"y":1554.0,},
         {"$GMRInstance":"v2","%Name":"inst_3A72E80","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_3A72E80","objectId":{"name":"objSmallSolidWall","path":"objects/objSmallSolidWall/objSmallSolidWall.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1830.0,"y":1566.0,},
         {"$GMRInstance":"v2","%Name":"inst_447D91E5","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_447D91E5","objectId":{"name":"objWall","path":"objects/objWall/objWall.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1566.0,"y":1404.0,},
+        {"$GMRInstance":"v2","%Name":"inst_5D36D848","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_5D36D848","objectId":{"name":"obj_skillUI","path":"objects/obj_skillUI/obj_skillUI.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1136.0,"y":1344.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRLayer":"","%Name":"ItemRooms","depth":600,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[
         {"$GMRLayer":"","%Name":"merchant","depth":700,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[

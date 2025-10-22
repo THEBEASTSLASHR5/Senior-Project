@@ -102,26 +102,45 @@ if (velocity == 0) {
 	sprite_index = spr_playerstand;
 }
 
-if (attack == true && attackCooldown <= 0) {	//Attack based on selected weapon type
-	if (attack_selected == attack_type.basic) {
-		attackCooldownMax = 10;
-		instance_create_layer(x, y, "lay_bullets", obj_basicMagic, {speed: 3, direction: theta});
-	}
-	if (attack_selected == attack_type.fireBall) {
-		attackCooldownMax = 20;
-		instance_create_layer(x, y, "lay_bullets", obj_fireBallMagic, {speed: 3, direction: theta});
-	}
-	if (attack_selected == attack_type.lightning) {
-		attackCooldownMax = 30;
-		instance_create_layer(x, y, "lay_bullets", obj_lightningbolt, {image_angle: theta, speed: 3, direction: theta, original: true});
-	}
-	attackCooldown = attackCooldownMax;
+if (attack == true) {	//Attack based on selected weapon type
+	var attack_fired = false; // track if we attacked
+
+    // Check for attacks
+    if (attack_selected == attack_type.basic && basic_stats.current_cooldown <= 0) {
+        // Attack succeeded
+        basic_stats.current_cooldown = basic_stats.cooldown_max;
+        instance_create_layer(x, y, "lay_bullets", obj_basicMagic, {speed: 3, direction: theta});
+        attack_fired = true;
+    }
+    else if (attack_selected == attack_type.fireBall && fireball_stats.current_cooldown <= 0) {
+        fireball_stats.current_cooldown = fireball_stats.cooldown_max;
+        instance_create_layer(x, y, "lay_bullets", obj_fireBallMagic, {speed: 3, direction: theta});
+        attack_fired = true;
+    }
+    else if (attack_selected == attack_type.lightning && lightning_stats.current_cooldown <= 0) {
+        lightning_stats.current_cooldown = lightning_stats.cooldown_max;
+        instance_create_layer(x, y, "lay_bullets", obj_lightningbolt, {image_angle: theta, speed: 3, direction: theta, original: true});
+        attack_fired = true;
+    }
+
+    // Check for FAILED attacks
+    // If pressed attack but nothing fired, show the cooldown message
+    if (attack_fired == false && instance_exists(obj_skillUI) && obj_skillUI.feedback_timer <= 0) {
+        obj_skillUI.feedback_timer = 60; // Show message for 1 second
+        obj_skillUI.feedback_text = "RECHARGING...";
+    }
 }
 
-if (attackCooldown > 0) {
-	attackCooldown -= 1;	
+// Cooldown Timers
+if (basic_stats.current_cooldown > 0) {
+	basic_stats.current_cooldown -= 1;
 }
-
+if (fireball_stats.current_cooldown > 0) {
+	fireball_stats.current_cooldown -= 1;
+}
+if (lightning_stats.current_cooldown > 0) {
+	lightning_stats.current_cooldown -= 1;
+}
 
 var bullet_collide = instance_place(x,y,obj_bulletparent);
 if (bullet_collide != noone && rolltimer <= 0) {
