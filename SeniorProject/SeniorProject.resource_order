@@ -62,6 +62,7 @@
     {"name":"obj_main_menu","order":21,"path":"objects/obj_main_menu/obj_main_menu.yy",},
     {"name":"obj_pause_button","order":18,"path":"objects/obj_pause_button/obj_pause_button.yy",},
     {"name":"obj_pause_controller","order":20,"path":"objects/obj_pause_controller/obj_pause_controller.yy",},
+    {"name":"obj_pauseMenu","order":1,"path":"objects/obj_pauseMenu/obj_pauseMenu.yy",},
     {"name":"obj_resume_button","order":19,"path":"objects/obj_resume_button/obj_resume_button.yy",},
     {"name":"obj_return_to_main","order":9,"path":"objects/obj_return_to_main/obj_return_to_main.yy",},
     {"name":"obj_roomWall","order":3,"path":"objects/obj_roomWall/obj_roomWall.yy",},
