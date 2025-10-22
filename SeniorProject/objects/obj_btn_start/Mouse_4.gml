@@ -1,1 +1,1 @@
-room_goto(EntranceTest);
+room_goto(rm_world1);
