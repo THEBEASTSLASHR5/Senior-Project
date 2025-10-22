@@ -1,1 +1,1 @@
-with (oDungeon) start_run();
+room_goto(EntranceTest);
