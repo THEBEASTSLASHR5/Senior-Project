@@ -1,14 +1,12 @@
 /// @description Insert description here
 // You can write your code in this editor
-if (start_room == true) {	//Currently hard coded to only work with one room. Add all rooms to giant array maybe? Or sort by location?
+if (start_room != -1) {
 	enemyList = []
-	var enemy = instance_create_layer(1204, 1943, "lay_player",  obj_wizard_spreadshot);
-	array_push(enemyList, enemy);
-	enemy = instance_create_layer(1404, 2056, "lay_player",  obj_wizard_ring);
-	array_push(enemyList, enemy);
-	enemy = instance_create_layer(1392, 1828, "lay_player",  obj_wizard_earthRiser);
-	array_push(enemyList, enemy);
-	start_room = false;
+	for (var i = 0; i < array_length(enemiesByRoom[start_room]); i+= 3) {
+		var enemy = instance_create_layer(enemiesByRoom[start_room][i], enemiesByRoom[start_room][i+1], "lay_player", enemiesByRoom[start_room][i+2]);
+		array_push(enemyList, enemy);
+	}
+	start_room = -1;
 	room_inProgress = true;
 }
 
