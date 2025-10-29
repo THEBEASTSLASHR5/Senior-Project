@@ -57,8 +57,18 @@ if (rolltimer > 0) {
 } else {
 	sprite_index = spr_playerwalk;
 	max_velocity = 1;
-	image_blend = c_white;
 }
+
+// hit flash
+if (hit_flash_timer > 0) {
+	hit_flash_timer -= 1;
+	image_blend = c_red; // Force red if flashing
+} else if (rolltimer > 0) {
+	image_blend = c_aqua; // If not flashing, check for roll
+} else {
+	image_blend = c_white; // Otherwise, be normal
+}
+
 
 if (move_right == true) {	//Swap facing direction
 	image_xscale = 1;	
@@ -146,6 +156,7 @@ var bullet_collide = instance_place(x,y,obj_bulletparent);
 if (bullet_collide != noone && rolltimer <= 0) {
 	if (bullet_collide.disable == false) {
 		hitpoints -= bullet_collide.damage;
+		hit_flash_timer = 7;
 		bullet_collide.disable = true;
 		instance_destroy(bullet_collide);
 	}
@@ -154,3 +165,4 @@ if (bullet_collide != noone && rolltimer <= 0) {
 if (hitpoints <= 0) {
 	game_restart();	
 }
+

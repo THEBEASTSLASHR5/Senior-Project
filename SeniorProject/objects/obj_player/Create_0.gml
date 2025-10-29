@@ -30,3 +30,9 @@ enum attack_type { //https://gamemaker.io/en/blog/hacking-stronger-enums-into-gm
 }
 
 attack_selected = attack_type.basic;
+
+// Gems(currency)
+global.gems = 0;
+
+// Hit flash
+hit_flash_timer = 0;

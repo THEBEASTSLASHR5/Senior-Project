@@ -14,6 +14,8 @@ if ((instance != noone)) {
 			instance_create_layer(x, y, "lay_explosion", obj_lightningRadius, {origin: instance, originx: instance.x, originy: instance.y});
 		}
 		instance.hitpoints -= 3 + originalBonusDamage;
+		instance.image_blend = c_red; // change player to red after getting hit
+		instance.alarm[0] = 7; // start timer to reset enemy color (in 7 frames) 
 		instance_destroy();
 	}
 }

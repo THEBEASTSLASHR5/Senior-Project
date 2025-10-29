@@ -50,3 +50,41 @@ if (player_hp <= 0) {
 draw_sprite_ext(sprHPBar, frame_to_draw, x_pos, y_pos, scale, scale, 0, c_white, 1);
 //
 
+
+// Draw HP text and Gem Counter
+var ui_start_x = 100; 
+var ui_start_y = 110; 
+var padding = 20;    
+var gem_icon_scale = 2.5; 
+
+// Draw HP text
+draw_set_font(fnt_GUI);
+draw_set_color(c_lime);
+draw_set_halign(fa_left);
+draw_set_valign(fa_middle); 
+var hp_string = "HP: " + string(obj_player.hitpoints) + "/" + string(obj_player.max_hitpoints);
+draw_text(ui_start_x, ui_start_y, hp_string);
+
+// Gem Icon's position
+var hp_text_width = string_width(hp_string);
+var icon_w_scaled = sprite_get_width(spr_gem) * gem_icon_scale;
+
+var icon_center_x = ui_start_x + hp_text_width + padding + (icon_w_scaled / 2);
+var icon_center_y = ui_start_y; 
+
+// Draw gem icon 
+draw_sprite_ext(
+    spr_gem, 0,icon_center_x,icon_center_y,gem_icon_scale,gem_icon_scale,0,c_white,1);
+
+// Draw gem text
+draw_set_valign(fa_middle);
+draw_set_font(fnt_GUI);
+draw_set_color(c_aqua);
+
+var gem_text = ": " + string(global.gems);
+var text_x = icon_center_x + (icon_w_scaled / 2) + 5;
+draw_text(text_x, ui_start_y, gem_text);
+
+draw_set_halign(fa_left);
+draw_set_valign(fa_top);
+//
