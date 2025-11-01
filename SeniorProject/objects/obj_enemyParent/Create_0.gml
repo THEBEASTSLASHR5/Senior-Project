@@ -1,4 +1,6 @@
-hitpoints = 10;
+hitpoints = 8;
+max_hitpoints = 8;
+my_color = c_white;
 
 enum enemy_state { //https://gamemaker.io/en/blog/hacking-stronger-enums-into-gml
 	Roam,

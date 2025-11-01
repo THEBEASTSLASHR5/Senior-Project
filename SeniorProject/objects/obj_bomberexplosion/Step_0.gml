@@ -16,6 +16,7 @@ if ((animate_Timer >= maxanimate_Timer) && (currentImage < 2)) { //Deal damage t
 	if (currentImage == 2) {
 		if (place_meeting(x, y, obj_player) && obj_player.rolltimer <= 0) {
 			obj_player.hitpoints -= 10;
+			obj_player.hit_flash_timer = 7;
 		}
 	}
 	

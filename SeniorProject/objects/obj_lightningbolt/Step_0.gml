@@ -15,6 +15,8 @@ if ((instance != noone)) {
 		}
 		instance.hitpoints -= 3 + originalBonusDamage;
 		audio_play_sound(aud_playerlightningstrike, 1, false, global.volume/200);
+		instance.image_blend = c_red; // change player to red after getting hit
+		instance.alarm[0] = 7; // start timer to reset enemy color (in 7 frames) 
 		instance_destroy();
 	}
 }

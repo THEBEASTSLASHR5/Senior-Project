@@ -5,6 +5,7 @@ if (global.paused) {
 }
 image_speed = 1; // restore animation when unpaused
 
+event_inherited();
 if (state == enemy_state.CombatIdle) {
 	if (timer == 0) {
 		timer = maxtimer;
@@ -18,7 +19,6 @@ if (state == enemy_state.CombatIdle) {
 } else if (state == enemy_state.Attacking) {
 	mp_potential_path_object(path, obj_player.x, obj_player.y, 3, 4, objWall);
 	path_start(path, 2, path_action_stop, 0);
-	
 	if (distance_to_object(obj_player) = 0)
 	{
 		audio_play_sound(aud_enemyexplosion, 1, false, global.volume/100);
