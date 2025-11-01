@@ -14,6 +14,7 @@ if (state == enemy_state.CombatIdle) {
 		charge++;
 	} else {
 		charge = 0;
+		audio_play_sound(aud_earthrise, 1, false, global.volume/100);
 		for (var i = 0; i < 5; i++) {
 			var negposx = choose(-1, 1);
 			var negposy = choose(-1, 1);

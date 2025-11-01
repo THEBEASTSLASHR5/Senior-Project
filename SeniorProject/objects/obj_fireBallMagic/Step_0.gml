@@ -8,6 +8,7 @@ if (instance != noone) {
 
 // Collision with SolidWall
 if place_meeting(x, y, objSolidWall){
+	audio_play_sound(aud_attackwallhit, 1, false, global.volume/100);
 	instance_create_layer(x, y, "lay_explosion", obj_explosion);
 	instance_destroy();
 }

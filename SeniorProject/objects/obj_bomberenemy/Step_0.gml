@@ -21,6 +21,7 @@ if (state == enemy_state.CombatIdle) {
 	
 	if (distance_to_object(obj_player) = 0)
 	{
+		audio_play_sound(aud_enemyexplosion, 1, false, global.volume/100);
 		instance_create_layer(x, y, "lay_bullets", obj_bomberexplosion);
 		instance_destroy();
 	}

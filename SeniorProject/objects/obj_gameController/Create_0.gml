@@ -31,3 +31,5 @@ if (variable_global_exists("game_timer_frames")) {
 } else {
     global.paused_time = 0;
 }
+
+global.volume = 50;

@@ -47,6 +47,7 @@ if (thetaInRadians >= pi) {		//Show wand in front of player when at specific ang
 
 if (roll == true) && (rolltimer == 0) {	//Roll
 	rolltimer = 20;
+	audio_play_sound(aud_playerroll, 1, false, global.volume/100);
 }
 
 if (rolltimer > 0) {
@@ -96,7 +97,12 @@ if (place_meeting(x, y + vspd, objWall)) {
 }
 y += vspd; // Apply vertical movement
 
-
+if (abs(hspd)+abs(vspd)>0 && rolltimer == 0) {
+	totaldistancewalked += 10;	
+}
+if (totaldistancewalked % 200 == 190) {	//Footstep Sounds
+	audio_play_sound(aud_playerfootstep, 1, false, global.volume/50);
+}
 
 if (velocity == 0) {
 	sprite_index = spr_playerstand;
@@ -111,16 +117,19 @@ if (attack == true) {	//Attack based on selected weapon type
         basic_stats.current_cooldown = basic_stats.cooldown_max;
         instance_create_layer(x, y, "lay_bullets", obj_basicMagic, {speed: 3, direction: theta});
         attack_fired = true;
+		audio_play_sound(aud_playerbasicattack, 1, false, global.volume/100);
     }
     else if (attack_selected == attack_type.fireBall && fireball_stats.current_cooldown <= 0) {
         fireball_stats.current_cooldown = fireball_stats.cooldown_max;
         instance_create_layer(x, y, "lay_bullets", obj_fireBallMagic, {speed: 3, direction: theta});
         attack_fired = true;
+		audio_play_sound(aud_playerfireballattack, 1, false, global.volume/100);
     }
     else if (attack_selected == attack_type.lightning && lightning_stats.current_cooldown <= 0) {
         lightning_stats.current_cooldown = lightning_stats.cooldown_max;
         instance_create_layer(x, y, "lay_bullets", obj_lightningbolt, {image_angle: theta, speed: 3, direction: theta, original: true});
         attack_fired = true;
+		audio_play_sound(aud_playerlightningattack, 1, false, global.volume/100);
     }
 
     // Check for FAILED attacks
@@ -145,6 +154,7 @@ if (lightning_stats.current_cooldown > 0) {
 var bullet_collide = instance_place(x,y,obj_bulletparent);
 if (bullet_collide != noone && rolltimer <= 0) {
 	if (bullet_collide.disable == false) {
+		audio_play_sound(aud_playerdamage, 1, false, global.volume/100);
 		hitpoints -= bullet_collide.damage;
 		bullet_collide.disable = true;
 		instance_destroy(bullet_collide);

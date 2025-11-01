@@ -8,6 +8,7 @@ if (start_room != -1) {
 	}
 	start_room = -1;
 	room_inProgress = true;
+	audio_play_sound(aud_roomopen, 1, false, global.volume/100);
 }
 
 if (room_inProgress == true) {
@@ -20,5 +21,6 @@ if (room_inProgress == true) {
 	if (stillAlive == false) {	//End room
 		room_inProgress = false;
 		instance_destroy(obj_roomWall);
+		audio_play_sound(aud_roomclose, 1, false, global.volume/100);
 	}
 }

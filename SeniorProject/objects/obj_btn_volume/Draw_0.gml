@@ -35,3 +35,5 @@ draw_rectangle(
 draw_set_font(fnt_Default);
 draw_set_color(c_lime);  // bright green (use c_green for darker tone)
 draw_text(text_x, text_y, text_str);
+
+draw_text(text_x+100, text_y, global.volume);

@@ -22,6 +22,7 @@ if (state == enemy_state.CombatIdle) {
 		charge++;
 	} else {
 		charge = 0;
+		audio_play_sound(aud_enemybasicshoot, 1, false, global.volume/100);
 		var bullet = instance_create_layer(x,y,"lay_bullets",obj_wizardmagic);
 		bullet.direction = point_direction(x,y,obj_player.x,obj_player.y);
 		bullet.speed = 2;
