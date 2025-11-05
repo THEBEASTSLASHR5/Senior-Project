@@ -1,17 +1,3 @@
-// Draw the button sprite
-draw_self();
-
-// Draw the volume text next to it
-//draw_set_color(c_white); // or whatever fits your UI
-//draw_text(x + sprite_width + 20, y + (sprite_height / 2.5), string(global.volume) + "%")
-
-// Check if mouse is over this button
-if (point_in_rectangle(mouse_x, mouse_y, x, y, x + sprite_width, y + sprite_height)) {
-    hovered = true;
-} else {
-    hovered = false;
-}
-
 // Check if mouse is over this button
 if (point_in_rectangle(mouse_x, mouse_y, x, y, x + sprite_width, y + sprite_height)) {
     hovered = true;
@@ -31,4 +17,3 @@ if (hovered) {
 } else {
     draw_self(); // draw normal
 }
-
