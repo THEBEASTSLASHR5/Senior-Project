@@ -9,6 +9,27 @@ if (surface_exists(global.pausedSurf)) {
 var screen_w = display_get_gui_width();
 var screen_h = display_get_gui_height();
 
+// Button dimensions and positions
+var button_w = 200;
+var button_h = 50;
+
+resume_btn_x = screen_w / 2 - button_w / 2;
+resume_btn_y = screen_h / 2 + 40;
+resume_btn_w = button_w;
+resume_btn_h = button_h;
+
+menu_btn_x = screen_w / 2 - button_w / 2;
+menu_btn_y = resume_btn_y + 70;
+menu_btn_w = button_w;
+menu_btn_h = button_h;
+
+// NEW: Exit-to-Settings button
+settings_btn_x = screen_w / 2 - button_w / 2;
+settings_btn_y = menu_btn_y + 70;
+settings_btn_w = button_w;
+settings_btn_h = button_h;
+
+
 // Draw a dark background 
 draw_set_color(c_black);
 draw_set_alpha(0.5); // 50% transparent
@@ -52,6 +73,13 @@ draw_text(resume_btn_x + (resume_btn_w / 2), resume_btn_y + (resume_btn_h / 2), 
 // Draw Main Menu Button
 draw_set_color(c_white);
 draw_text(menu_btn_x + (menu_btn_w / 2), menu_btn_y + (menu_btn_h / 2), "MAIN MENU");
+
+// Draw Exit-to-Settings Button
+draw_set_color(c_white);
+draw_text(settings_btn_x + (settings_btn_w / 2),
+          settings_btn_y + (settings_btn_h / 2),
+          "EXIT TO SETTINGS");
+
 
 
 // Reset alignment 

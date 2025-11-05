@@ -183,6 +183,8 @@
     {"id":{"name":"spr_gem","path":"sprites/spr_gem/spr_gem.yy",},},
     {"id":{"name":"spr_lightningbolt","path":"sprites/spr_lightningbolt/spr_lightningbolt.yy",},},
     {"id":{"name":"spr_main_menu","path":"sprites/spr_main_menu/spr_main_menu.yy",},},
+    {"id":{"name":"spr_newscreenres","path":"sprites/spr_newscreenres/spr_newscreenres.yy",},},
+    {"id":{"name":"spr_newvol","path":"sprites/spr_newvol/spr_newvol.yy",},},
     {"id":{"name":"spr_pause_icon","path":"sprites/spr_pause_icon/spr_pause_icon.yy",},},
     {"id":{"name":"spr_playerroll","path":"sprites/spr_playerroll/spr_playerroll.yy",},},
     {"id":{"name":"spr_playerstand","path":"sprites/spr_playerstand/spr_playerstand.yy",},},

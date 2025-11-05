@@ -147,6 +147,8 @@
     {"name":"spr_FreeTD","order":1,"path":"sprites/spr_FreeTD/spr_FreeTD.yy",},
     {"name":"spr_lightningbolt","order":3,"path":"sprites/spr_lightningbolt/spr_lightningbolt.yy",},
     {"name":"spr_main_menu","order":22,"path":"sprites/spr_main_menu/spr_main_menu.yy",},
+    {"name":"spr_newscreenres","order":24,"path":"sprites/spr_newscreenres/spr_newscreenres.yy",},
+    {"name":"spr_newvol","order":23,"path":"sprites/spr_newvol/spr_newvol.yy",},
     {"name":"spr_pause_icon","order":20,"path":"sprites/spr_pause_icon/spr_pause_icon.yy",},
     {"name":"spr_playerstand","order":1,"path":"sprites/spr_playerstand/spr_playerstand.yy",},
     {"name":"spr_playerwalk","order":2,"path":"sprites/spr_playerwalk/spr_playerwalk.yy",},

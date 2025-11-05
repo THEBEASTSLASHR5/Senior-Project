@@ -22,4 +22,19 @@ if (mouse_check_button_pressed(mb_left)) {
 		room_goto(rm_start); 
 		instance_destroy();
 	}
+if (mouse_check_button_pressed(mb_left)) {
+    // Get mouse position in GUI coordinates
+    var mx = device_mouse_x_to_gui(0);
+    var my = device_mouse_y_to_gui(0);
+}
+	// Exit to Settings
+    if (mx > settings_btn_x && mx < settings_btn_x + settings_btn_w &&
+        my > settings_btn_y && my < settings_btn_y + settings_btn_h) {
+			draw_set_font(-1); // resets to default font
+draw_set_halign(fa_left);
+draw_set_valign(fa_top);
+draw_set_color(c_white);
+
+        room_goto(rm_settings);
+		}
 }
