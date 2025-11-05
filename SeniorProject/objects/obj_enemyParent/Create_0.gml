@@ -1,4 +1,6 @@
-hitpoints = 10;
+hitpoints = 8;
+max_hitpoints = 8;
+my_color = c_white;
 
 enum enemy_state { //https://gamemaker.io/en/blog/hacking-stronger-enums-into-gml
 	Roam,
@@ -7,3 +9,6 @@ enum enemy_state { //https://gamemaker.io/en/blog/hacking-stronger-enums-into-gm
 }
 
 state = enemy_state.CombatIdle;
+
+instance_create_layer(x, y, "lay_bullets", obj_entranceSmoke);
+path = path_add();

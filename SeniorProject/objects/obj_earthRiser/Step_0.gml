@@ -6,7 +6,7 @@ if (timer > 0) {
 	timer -= 1;	
 } else {
 	image_speed = -2;
-	if (image_index == 0) {
+	if (image_index <= 0) {
 		instance_destroy();	
 	}
 }

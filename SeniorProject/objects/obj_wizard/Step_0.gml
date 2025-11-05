@@ -16,14 +16,19 @@ if (state == enemy_state.CombatIdle) {
 	}
 
 } else if (state == enemy_state.Attacking) {
+	path_end();
 	sprite_index = spr_wizardenemy_attack;
 	if (charge < maxcharge) {
 		charge++;
 	} else {
 		charge = 0;
+		audio_play_sound(aud_enemybasicshoot, 1, false, global.volume/100);
 		var bullet = instance_create_layer(x,y,"lay_bullets",obj_wizardmagic);
 		bullet.direction = point_direction(x,y,obj_player.x,obj_player.y);
 		bullet.speed = 2;
+		
+		mp_potential_path_object(path, obj_player.x, obj_player.y, 3, 4, objWall);
+		path_start(path, 0.5, path_action_stop, 0);
 		state = enemy_state.CombatIdle;
 	}
 }

@@ -1,1 +1,1 @@
-instance_create_layer(96, 128, "lay_player", obj_player);
+instance_create_layer(x, y, "lay_player", obj_player);
