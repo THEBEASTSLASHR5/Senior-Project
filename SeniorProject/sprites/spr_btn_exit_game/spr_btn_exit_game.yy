@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"spr_btn_exit_game",
   "bboxMode":0,
   "bbox_bottom":458,

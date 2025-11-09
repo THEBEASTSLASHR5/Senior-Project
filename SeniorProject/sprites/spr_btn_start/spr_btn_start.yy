@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"spr_btn_start",
   "bboxMode":0,
   "bbox_bottom":448,
