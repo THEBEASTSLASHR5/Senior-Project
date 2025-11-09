@@ -1,6 +1,6 @@
 draw_set_font(fnt_Default);
-draw_text(x,y, "rm_normal_vert_3");
-var text_str = "rm_normal_vert_3";
+draw_text(x,y, "rm_world1");
+var text_str = "rm_world1";
 var text_x = x;
 var text_y = y;
 
