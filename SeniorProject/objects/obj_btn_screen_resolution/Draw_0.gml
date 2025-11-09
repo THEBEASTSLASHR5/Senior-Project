@@ -1,37 +1,34 @@
-draw_set_font(fnt_Default);
-draw_text(x,y, "Screen Resolution");
-var text_str = "Screen Resolution";
-var text_x = x;
-var text_y = y;
+// Draw the button sprite
+draw_self();
 
-// measure text size
-var text_w = string_width(text_str);
-var text_h = string_height(text_str);
+// Draw the volume text next to it
+//draw_set_color(c_white); // or whatever fits your UI
+//draw_text(x + sprite_width + 20, y + (sprite_height / 2.5), string(global.volume) + "%")
 
-// padding around text
-var pad = 4;
+// Check if mouse is over this button
+if (point_in_rectangle(mouse_x, mouse_y, x, y, x + sprite_width, y + sprite_height)) {
+    hovered = true;
+} else {
+    hovered = false;
+}
 
-// --- draw black background ---
-draw_set_color(c_black);
-draw_rectangle(
-    text_x - pad,
-    text_y - pad,
-    text_x + text_w + pad,
-    text_y + text_h + pad,
-    true   // filled box
-);
+// Check if mouse is over this button
+if (point_in_rectangle(mouse_x, mouse_y, x, y, x + sprite_width, y + sprite_height)) {
+    hovered = true;
+} else {
+    hovered = false;
+}
 
-// --- draw white outline ---
-draw_set_color(c_white);
-draw_rectangle(
-    text_x - pad,
-    text_y - pad,
-    text_x + text_w + pad,
-    text_y + text_h + pad,
-    false  // outline only
-);
+// If hovered, draw the green-tinted version
+if (hovered) {
+    // Draw the original button
+    draw_self();
 
-// --- draw green text ---
-draw_set_font(fnt_Default);
-draw_set_color(c_lime);  // bright green (use c_green for darker tone)
-draw_text(text_x, text_y, text_str);
+    // Add the green tint directly over the object
+    draw_set_color(make_color_rgb(0, 255, 0)); // bright green tint
+    draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, make_color_rgb(0, 255, 0), 0.25);
+    draw_set_color(c_white);
+} else {
+    draw_self(); // draw normal
+}
+
