@@ -101,6 +101,7 @@
     {"name":"rm_start","order":10,"path":"rooms/rm_start/rm_start.yy",},
     {"name":"rm_test","order":18,"path":"rooms/rm_test/rm_test.yy",},
     {"name":"rm_world1","order":16,"path":"rooms/rm_world1/rm_world1.yy",},
+    {"name":"rm_world2","order":19,"path":"rooms/rm_world2/rm_world2.yy",},
     {"name":"aud_attackwallhit","order":6,"path":"sounds/aud_attackwallhit/aud_attackwallhit.yy",},
     {"name":"aud_earthrise","order":10,"path":"sounds/aud_earthrise/aud_earthrise.yy",},
     {"name":"aud_earthrose","order":11,"path":"sounds/aud_earthrose/aud_earthrose.yy",},
