@@ -5,3 +5,7 @@ if !(variable_instance_exists(self, "donthit")) {
 }
 
 originalBonusDamage = 0;
+
+if !(variable_instance_exists(self, "original")) {
+	audio_play_sound(aud_playerlightningattack, 1, false, global.volume/200);
+}

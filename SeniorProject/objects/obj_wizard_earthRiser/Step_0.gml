@@ -20,6 +20,7 @@ if (state == enemy_state.CombatIdle) {
 	if (charge < maxcharge) {
 		charge++;
 	} else {
+		audio_play_sound(aud_earthrise, 1, false, global.volume/100);
 		charge = 0;
 		var bullet = instance_create_layer(obj_player.x,obj_player.y+6,"lay_player",obj_earthRiser_Warning);
 		state = enemy_state.CombatIdle;
