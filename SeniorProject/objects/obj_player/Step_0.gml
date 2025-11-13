@@ -5,6 +5,13 @@ if (global.paused) {
 }
 image_speed = 1; // restore animation when unpaused
 
+if (keyboard_check_pressed(vk_f1)) {
+	if (noclip != 0) {
+		noclip = 0;	
+	} else {
+		noclip = 8;	
+	}
+}
 
 //Player Input
 depth = -y;
@@ -52,12 +59,12 @@ if (roll == true) && (rolltimer == 0) {	//Roll
 
 if (rolltimer > 0) {
 	sprite_index = spr_playerroll;
-	max_velocity = 2;
+	max_velocity = 2 + (2*noclip);
 	rolltimer -= 1;
 	image_blend = c_aqua;
 } else {
 	sprite_index = spr_playerwalk;
-	max_velocity = 1;
+	max_velocity = 1 + (noclip);
 }
 
 // hit flash
@@ -90,20 +97,24 @@ var hspd = velocity * cos(dir_angle); // Horizontal speed
 var vspd = -velocity * sin(dir_angle); // vertical speed
 
 // Horizontal collision check
-if (place_meeting(x + hspd, y, objWall)) {
-	while (!place_meeting(x + sign(hspd), y, objWall)) {
-		x += sign(hspd);
+if (noclip == 0) {
+	if (place_meeting(x + hspd, y, objWall)) {
+		while (!place_meeting(x + sign(hspd), y, objWall)) {
+			x += sign(hspd);
+		}
+		hspd = 0;
 	}
-	hspd = 0;
 }
 x += hspd; // Apply horizontal movement
 
 // Vertical collision check
-if (place_meeting(x, y + vspd, objWall)) {
-	while (!place_meeting(x, y + sign(vspd), objWall)) {
-		y += sign(vspd);
+if (noclip == 0) {
+	if (place_meeting(x, y + vspd, objWall)) {
+		while (!place_meeting(x, y + sign(vspd), objWall)) {
+			y += sign(vspd);
+		}
+		vspd = 0;
 	}
-	vspd = 0;
 }
 y += vspd; // Apply vertical movement
 

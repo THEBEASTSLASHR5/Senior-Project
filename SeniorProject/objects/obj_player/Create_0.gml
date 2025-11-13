@@ -6,6 +6,8 @@ hitpoints = 50;
 max_hitpoints = 50;
 totaldistancewalked = 0;
 
+noclip = 0;
+
 player_Wand = instance_create_layer(x, y, "lay_player", obj_wand);
 
 
@@ -37,3 +39,6 @@ global.gems = 0;
 
 // Hit flash
 hit_flash_timer = 0;
+
+// Debug Mode
+debug = false;
