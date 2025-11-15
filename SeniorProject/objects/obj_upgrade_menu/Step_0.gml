@@ -1,5 +1,5 @@
 // Close upgrade menu with "M" and UNPAUSE
-if (keyboard_check_pressed(ord("M")) && can_close) {
+if (keyboard_check_pressed(ord("F")) && can_close) {
     global.paused = false;
     global.just_unpaused = true;
     instance_destroy();       

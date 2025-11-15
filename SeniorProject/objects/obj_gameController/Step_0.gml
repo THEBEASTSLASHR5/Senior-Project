@@ -1,4 +1,4 @@
-if (keyboard_check_pressed(vk_escape)) {
+if (keyboard_check_pressed(vk_escape) && !instance_exists(obj_upgrade_menu)) {
     global.paused = !global.paused;
 
     if (global.paused) {

@@ -24,19 +24,38 @@ if (keyboard_check_pressed(vk_escape)) {
 	}
 }
 
-// Check for Upgrade Menu (M)
-if (keyboard_check_pressed(ord("M"))) {
-	if (global.paused == false) {
-		// PAUSE THE GAME
-		global.paused = true;
-		
-    	global.paused_hp = player_hp;
-    	global.paused_max_hp = player_max_hp;
-    	global.paused_time = global.game_timer_frames;
-		
-		// Create the upgrade menu
-		instance_create_layer(0, 0, "Instances", obj_upgrade_menu);
-	}
+// Check for Upgrade Menu (F)
+if (keyboard_check_pressed(ord("F"))) {
+    
+    // Check if the upgrade menu is already open
+    if (instance_exists(obj_upgrade_menu)) {
+        
+        global.paused = false;
+        global.just_unpaused = true;
+        with (obj_upgrade_menu) {
+            instance_destroy();
+        }
+    }
+    // Check if the game is not paused AND the player exists
+    else if (global.paused == false && instance_exists(obj_player)) {
+        
+        // Check if a merchant exists in the room
+        if (instance_exists(obj_merchant)) {
+            
+            // Check if the player is close to ANY merchant
+            if (collision_circle(obj_player.x, obj_player.y, 48, obj_merchant, false, true)) { // 48 pixels
+                
+                global.paused = true;
+                
+                global.paused_hp      = player_hp;
+                global.paused_max_hp  = player_max_hp;
+                global.paused_time    = global.game_timer_frames;
+                
+                // Create the upgrade menu
+                instance_create_layer(0, 0, "Instances", obj_upgrade_menu);
+            }
+        }
+    }
 }
 
 

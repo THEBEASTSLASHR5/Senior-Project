@@ -80,7 +80,7 @@ if (upgrade_message_timer > 0) {
 
 // Draw "Close" hint
 draw_set_color(c_white);
-draw_text(center_x, center_y + 220, "Press 'M' to close");
+draw_text(center_x, center_y + 220, "Press 'F' to close");
 
 // Reset alignment
 draw_set_halign(fa_left);

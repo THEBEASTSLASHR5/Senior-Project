@@ -13,4 +13,4 @@ if (surface_exists(application_surface)) {
 // Freeze gameplay
 instance_deactivate_all(true);
 instance_activate_object(obj_gameController);
-instance_create_layer(0, 0, "GUI", obj_pauseMenu);
+instance_create_layer(0, 0, "Instances", obj_pauseMenu);
