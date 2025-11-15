@@ -2,6 +2,8 @@ if (hitpoints == 0) {
 	room = rm_win;
 }
 
+
+
 event_inherited()
 
 if (global.paused) {
