@@ -21,7 +21,7 @@ if ((animate_Timer >= maxanimate_Timer) && (currentImage < 2)) { //Deal damage t
 		{
 		    for (var i = 0; i < _num; ++i;)
 		    {
-		        _list[| i].hitpoints -= 3;
+		        _list[| i].hitpoints -= damage;
 		    }
 		}
 

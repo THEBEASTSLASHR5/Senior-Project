@@ -23,7 +23,8 @@ if _num > 0	//Iterate through all nearby enemies.
 		//show_debug_message(_list[| i].x);
 		//show_debug_message(_list[| i].y);
 		//show_debug_message(theta);
-		instance_create_layer(originx, originy, "lay_bullets", obj_lightningbolt, {image_angle: theta, speed: 5, direction: theta, donthit: origin, image_xscale: 0.5, image_yscale: 0.5});	//Shoot a smaller lightning bolt at every nearby enemy.
+		instance_create_layer(originx, originy, "lay_bullets", obj_lightningbolt, {image_angle: theta, speed: 5, direction: theta, 
+			donthit: origin, image_xscale: 0.5, image_yscale: 0.5, damage: obj_player.lightning_stats.chain_damage});	//Shoot a smaller lightning bolt at every nearby enemy.
 	}
 }
 
