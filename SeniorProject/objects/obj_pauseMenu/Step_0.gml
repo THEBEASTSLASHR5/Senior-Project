@@ -9,6 +9,7 @@ if (mouse_check_button_pressed(mb_left)) {
 
 		// UNPAUSE THE GAME 
 		global.paused = false;
+		global.just_unpaused = true;
 		instance_activate_all(); 
 		instance_destroy();     
 	}
