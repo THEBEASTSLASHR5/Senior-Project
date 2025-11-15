@@ -4,10 +4,12 @@ global.game_timer_frames = 0;
 global.paused = false;
 global.just_unpaused = false;
 
-global.upgrade_costs = {
-    hp_restore: 5,
-    hp_max: 10,
-    basic_dmg: 2,
-    fire_dmg: 2,
-    lightning_dmg: 2
+// hp restore is fixed
+global.hp_restore_cost = 5;
+// this will trackk the level of each upgrade
+global.upgrade_levels = {
+    hp_max: 0,
+    basic_dmg: 0,
+    fire_dmg: 0,
+    lightning_dmg: 0
 }

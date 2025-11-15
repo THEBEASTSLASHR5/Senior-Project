@@ -65,12 +65,22 @@ var draw_button_text = function(button_y, text, cost) {
 	
 }
 
+// Calculate Dynamic Costs
+var cost_hp_restore = global.hp_restore_cost;
+// IF the hp_max level is less than 10(first 10 upgrade), Then set cost_hp_max to 5
+// ELSE if it's 10 or more, set cost_hp_max to 10
+var cost_hp_max = (global.upgrade_levels.hp_max < 10) ? 5 : 10;
+// Same logic as above but this cost 1 for the first 10 upgrade the rest is 2
+var cost_basic = (global.upgrade_levels.basic_dmg < 10) ? 1 : 2;
+var cost_fire = (global.upgrade_levels.fire_dmg < 10) ? 1 : 2;
+var cost_lightning = (global.upgrade_levels.lightning_dmg < 10) ? 1 : 2;
+
 // Draw all 5 buttons
-draw_button_text(btn_y_start + (btn_y_spacing * 0), "Restore HP", global.upgrade_costs.hp_restore);
-draw_button_text(btn_y_start + (btn_y_spacing * 1), "Increase Max HP", global.upgrade_costs.hp_max);
-draw_button_text(btn_y_start + (btn_y_spacing * 2), "Upgrade Basic", global.upgrade_costs.basic_dmg);
-draw_button_text(btn_y_start + (btn_y_spacing * 3), "Upgrade Fireball", global.upgrade_costs.fire_dmg);
-draw_button_text(btn_y_start + (btn_y_spacing * 4), "Upgrade Lightning", global.upgrade_costs.lightning_dmg);
+draw_button_text(btn_y_start + (btn_y_spacing * 0), "Restore HP (+25)", cost_hp_restore);
+draw_button_text(btn_y_start + (btn_y_spacing * 1), "Increase Max HP", cost_hp_max);
+draw_button_text(btn_y_start + (btn_y_spacing * 2), "Upgrade Basic", cost_basic);
+draw_button_text(btn_y_start + (btn_y_spacing * 3), "Upgrade Fireball", cost_fire);
+draw_button_text(btn_y_start + (btn_y_spacing * 4), "Upgrade Lightning", cost_lightning);
 
 // Draw feedback message
 if (upgrade_message_timer > 0) {

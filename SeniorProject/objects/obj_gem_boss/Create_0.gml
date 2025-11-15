@@ -1,5 +1,3 @@
-lifetime = 600; // 10sec
-flash_time = 180; // 3sec
-
-start_y = y;
-bob_angle = 0;
+event_inherited();
+gem_value = 50;
+image_blend = c_red;

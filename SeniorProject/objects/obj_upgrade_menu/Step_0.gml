@@ -49,15 +49,18 @@ if (mouse_clicked == true) {
     }
     
     
-    // Button 1: Restore HP
+    // Button 1: Restore 25 HP
     if (check_button(btn_y_start + (btn_y_spacing * 0), mouse_x_gui, mouse_y_gui)) {
-        if (global.gems >= global.upgrade_costs.hp_restore) { 
+        if (global.gems >= global.hp_restore_cost) { 
             if (player.hitpoints < player.max_hitpoints) {
-                global.gems -= global.upgrade_costs.hp_restore; 
-                player.hitpoints = player.max_hitpoints;
-                show_feedback("Health Restored!", true);
-				button_click_index = 0; 
-				button_click_timer = 15; // Flash for 15 frames
+                global.gems -= global.hp_restore_cost; 
+                player.hitpoints += 25; // Restore 25 HP
+                if (player.hitpoints > player.max_hitpoints) {
+                    player.hitpoints = player.max_hitpoints; // Don't overheal
+                }
+                show_feedback("Restored 25 HP!", true);
+				button_click_index = 0; 
+				button_click_timer = 15;
             } else {
                 show_feedback("Already at full health!", false);
             }
@@ -68,13 +71,15 @@ if (mouse_clicked == true) {
     
     // Button 2: Increase Max HP
     else if (check_button(btn_y_start + (btn_y_spacing * 1), mouse_x_gui, mouse_y_gui)) {
-        if (global.gems >= global.upgrade_costs.hp_max) { 
-            global.gems -= global.upgrade_costs.hp_max; 
+        // for the first 10 time(level) the cost to upgrade is 5, after the 10 the cost to upgrade will be 10
+		var current_cost = (global.upgrade_levels.hp_max < 10) ? 5 : 10;
+        if (global.gems >= current_cost) { 
+            global.gems -= current_cost; 
             player.max_hitpoints += 10;
-            global.upgrade_costs.hp_max += 5;
+            global.upgrade_levels.hp_max += 1; // Increase level
             show_feedback("Max HP Increased!", true);
-			button_click_index = 1; 
-            button_click_timer = 15; 
+			button_click_index = 1; 
+            button_click_timer = 15; 
         } else {
             show_feedback("Not enough gems!", false);
          }
@@ -82,12 +87,14 @@ if (mouse_clicked == true) {
     
     // Button 3: Basic Damage
     else if (check_button(btn_y_start + (btn_y_spacing * 2), mouse_x_gui, mouse_y_gui)) {
-        if (global.gems >= global.upgrade_costs.basic_dmg) { 
-            global.gems -= global.upgrade_costs.basic_dmg; 
-            player.basic_stats.damage += 1;
-            global.upgrade_costs.basic_dmg += 2;
+		// same logic as above, but the first 10 time(level) will cost 1, after that will be 2
+        var current_cost = (global.upgrade_levels.basic_dmg < 10) ? 1 : 2;
+        if (global.gems >= current_cost) { 
+            global.gems -= current_cost; 
+            player.basic_stats.damage += 0.3;
+            global.upgrade_levels.basic_dmg += 1; // Increase level
             show_feedback("Basic Attack Upgraded!", true);
-			button_click_index = 2; 
+			button_click_index = 2; 
 			button_click_timer = 15;
         } else {
             show_feedback("Not enough gems!", false);
@@ -96,27 +103,29 @@ if (mouse_clicked == true) {
     
     // Button 4: Fireball Damage
     else if (check_button(btn_y_start + (btn_y_spacing * 3), mouse_x_gui, mouse_y_gui)) {
-        if (global.gems >= global.upgrade_costs.fire_dmg) { 
-            global.gems -= global.upgrade_costs.fire_dmg; 
-            player.fireball_stats.damage += 2;
-            global.upgrade_costs.fire_dmg += 2; 
+        var current_cost = (global.upgrade_levels.fire_dmg < 10) ? 1 : 2;
+        if (global.gems >= current_cost) { 
+            global.gems -= current_cost; 
+            player.fireball_stats.damage += 0.5;
+            global.upgrade_levels.fire_dmg += 1; // Increase level
             show_feedback("Fireball Upgraded!", true);
-			button_click_index = 3; 
+			button_click_index = 3; 
 			button_click_timer = 15;
         } else {
-            show_feedback("Not enough gems!", false);
+            show_feedback("Not enough gems!", false);
         }
     }
     
     // Button 5: Lightning Damage
     else if (check_button(btn_y_start + (btn_y_spacing * 4), mouse_x_gui, mouse_y_gui)) {
-        if (global.gems >= global.upgrade_costs.lightning_dmg) { 
-            global.gems -= global.upgrade_costs.lightning_dmg; 
-            player.lightning_stats.damage += 1;
-            player.lightning_stats.chain_damage += 1;
-            global.upgrade_costs.lightning_dmg += 2; 
+        var current_cost = (global.upgrade_levels.lightning_dmg < 10) ? 1 : 2;
+        if (global.gems >= current_cost) { 
+            global.gems -= current_cost; 
+            player.lightning_stats.damage += 0.5;
+            player.lightning_stats.chain_damage += 0.3;
+            global.upgrade_levels.lightning_dmg += 1; // Increase level
             show_feedback("Lightning Upgraded!", true);
-			button_click_index = 4; 
+			button_click_index = 4; 
 			button_click_timer = 15;
         } else {
             show_feedback("Not enough gems!", false);
