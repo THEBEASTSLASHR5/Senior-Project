@@ -1,4 +1,6 @@
-if (hitpoints == 0) {
+if (hitpoints <= 0) {
+	instance_create_layer(x, y, "Instances", obj_gem_boss);
+	instance_destroy();
 	room = rm_win;
 }
 

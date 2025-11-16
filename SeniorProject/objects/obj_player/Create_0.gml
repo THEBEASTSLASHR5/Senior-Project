@@ -13,17 +13,21 @@ player_Wand = instance_create_layer(x, y, "lay_player", obj_wand);
 
 basic_stats = {
     cooldown_max: 10,
-    current_cooldown: 0
+    current_cooldown: 0,
+	damage: 1
 }
 
 fireball_stats = {
     cooldown_max: 150,
-    current_cooldown: 0
+    current_cooldown: 0,
+	damage: 2
 }
 
 lightning_stats = {
     cooldown_max: 150,
-    current_cooldown: 0
+    current_cooldown: 0,
+	damage: 2,
+	chain_damage: 1
 }
 
 enum attack_type { //https://gamemaker.io/en/blog/hacking-stronger-enums-into-gml

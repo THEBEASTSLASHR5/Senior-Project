@@ -13,7 +13,7 @@ if ((instance != noone)) {
 			originalBonusDamage = 2;
 			instance_create_layer(x, y, "lay_explosion", obj_lightningRadius, {origin: instance, originx: instance.x, originy: instance.y});
 		}
-		instance.hitpoints -= 3 + originalBonusDamage;
+		instance.hitpoints -= damage + originalBonusDamage;
 		audio_play_sound(aud_playerlightningstrike, 1, false, global.volume/200);
 		instance.image_blend = c_red; // change player to red after getting hit
 		instance.alarm[0] = 7; // start timer to reset enemy color (in 7 frames) 

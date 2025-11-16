@@ -136,19 +136,20 @@ if (attack == true) {	//Attack based on selected weapon type
     if (attack_selected == attack_type.basic && basic_stats.current_cooldown <= 0) {
         // Attack succeeded
         basic_stats.current_cooldown = basic_stats.cooldown_max;
-        instance_create_layer(x, y, "lay_bullets", obj_basicMagic, {speed: 3, direction: theta});
+        instance_create_layer(x, y, "lay_bullets", obj_basicMagic, {speed: 3, direction: theta, damage: basic_stats.damage});
         attack_fired = true;
 		audio_play_sound(aud_playerbasicattack, 1, false, global.volume/100);
     }
     else if (attack_selected == attack_type.fireBall && fireball_stats.current_cooldown <= 0) {
         fireball_stats.current_cooldown = fireball_stats.cooldown_max;
-        instance_create_layer(x, y, "lay_bullets", obj_fireBallMagic, {speed: 3, direction: theta});
+        instance_create_layer(x, y, "lay_bullets", obj_fireBallMagic, {speed: 3, direction: theta, damage: fireball_stats.damage});
         attack_fired = true;
 		audio_play_sound(aud_playerfireballattack, 1, false, global.volume/100);
     }
     else if (attack_selected == attack_type.lightning && lightning_stats.current_cooldown <= 0) {
         lightning_stats.current_cooldown = lightning_stats.cooldown_max;
-        instance_create_layer(x, y, "lay_bullets", obj_lightningbolt, {image_angle: theta, speed: 3, direction: theta, original: true});
+        instance_create_layer(x, y, "lay_bullets", obj_lightningbolt, {image_angle: theta, speed: 3, direction: theta, original: true, 
+			damage: lightning_stats.damage, chain_damage: lightning_stats.chain_damage});
         attack_fired = true;
 		audio_play_sound(aud_playerlightningattack, 1, false, global.volume/100);
     }

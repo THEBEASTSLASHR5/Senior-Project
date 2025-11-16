@@ -1,2 +1,2 @@
-global.gems += 1;
+global.gems += gem_value;
 instance_destroy();
